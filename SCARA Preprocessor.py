@@ -13,9 +13,12 @@
 import math
 import sys
 
+#Get terminal parameters (input file name)
+param = sys.argv[1:]
 
 RIGHT_HANDED = False   #Mark true for right handed, false for left handed
-fileInput = "DICKBUTT_0008"  #argument expects .gcode files
+#fileInput = "DICKBUTT_0008"  #argument expects .gcode files
+fileInput = param[0]
 fileOutput = fileInput+"_out"
 START_GCODE = ';G92 X-141.6 Y147.5 Z25\n'
 END_GCODE = 'G1 X-45 Y135 F1200\nM84\n\n'
